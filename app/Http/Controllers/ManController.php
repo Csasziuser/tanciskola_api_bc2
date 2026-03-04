@@ -12,38 +12,8 @@ class ManController extends Controller
      */
     public function index()
     {
-        //
+        $ferfiak = Man::all();
+        return response()->json($ferfiak,200,options:JSON_UNESCAPED_UNICODE);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Man $man)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Man $man)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Man $man)
-    {
-        //
-    }
 }

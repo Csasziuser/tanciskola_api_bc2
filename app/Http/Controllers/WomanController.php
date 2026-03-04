@@ -12,38 +12,7 @@ class WomanController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Woman $woman)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Woman $woman)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Woman $woman)
-    {
-        //
+        $nok = Woman::all();
+        return response()->json($nok,200,options:JSON_UNESCAPED_UNICODE);
     }
 }
